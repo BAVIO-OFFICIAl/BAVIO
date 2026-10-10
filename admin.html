@@ -574,6 +574,8 @@ tr:hover td{
 
 }
 
+.stats.three{grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){.stats.three{grid-template-columns:repeat(2,1fr)}}
 </style>
 
 </head>
@@ -738,7 +740,7 @@ tr:hover td{
             class="section active"
         >
 
-            <div class="stats">
+            <div class="stats three">
 
                 <div class="stat-card">
 
@@ -770,20 +772,7 @@ tr:hover td{
 
                 </div>
 
-                <div class="stat-card">
-
-                    <h3>
-                        الطلبات
-                    </h3>
-
-                    <div
-                        class="stat-number"
-                        id="statOrders"
-                    >
-                        0
-                    </div>
-
-                </div>
+                
 
                 <div class="stat-card">
 
@@ -802,7 +791,14 @@ tr:hover td{
 
             </div>
 
-            <div class="card">
+            <div class="stats">
+    <div class="stat-card"><h3>إجمالي الطلبات</h3><div class="stat-number" id="statOrdersTotal">0</div></div>
+    <div class="stat-card"><h3>الطلبات الحالية</h3><div class="stat-number" id="statOrdersCurrent" style="color:#ffc800">0</div></div>
+    <div class="stat-card"><h3>الطلبات المكتملة</h3><div class="stat-number" id="statOrdersDone">0</div></div>
+    <div class="stat-card"><h3>الطلبات الملغية</h3><div class="stat-number" id="statOrdersCancelled" style="color:#ff5555">0</div></div>
+</div>
+
+<div class="card">
 
                 <div class="card-title">
 
@@ -2099,8 +2095,7 @@ async function loadDashboard(){
 
         const ordersResult =
             await supabaseClient
-                .from("orders")
-                .select("id");
+                .from("orders").select("id,status");
 
         const customersResult =
             await supabaseClient
@@ -2118,6 +2113,12 @@ async function loadDashboard(){
 
         const products =
             productsResult.data || [];
+        const orderRows = ordersResult.data || [];
+        const countOrders = fn => orderRows.filter(fn).length;
+        document.getElementById("statOrdersTotal").textContent = orderRows.length;
+        document.getElementById("statOrdersDone").textContent = countOrders(o => o.status === "delivered");
+        document.getElementById("statOrdersCancelled").textContent = countOrders(o => o.status === "cancelled");
+        document.getElementById("statOrdersCurrent").textContent = countOrders(o => o.status !== "delivered" && o.status !== "cancelled");
 
         document.getElementById(
             "statProducts"
@@ -2131,12 +2132,7 @@ async function loadDashboard(){
                 p => p.active
             ).length;
 
-        document.getElementById(
-            "statOrders"
-        ).textContent =
-            (
-                ordersResult.data || []
-            ).length;
+        
 
         document.getElementById(
             "statCustomers"
