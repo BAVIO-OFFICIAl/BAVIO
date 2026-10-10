@@ -1,0 +1,2736 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BAVIO | Tech Accessories</title>
+<meta name="description" content="BAVIO - إكسسوارات موبايلات وسماعات وشواحن وجرابات من أشهر البراندات.">
+<meta name="theme-color" content="#080808">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Tahoma,sans-serif;
+    background:#080808;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+:root{
+    --green:#39ff14;
+    --black:#080808;
+}
+
+
+/* ================= HEADER ================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(8,8,8,.94);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid #222;
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    min-height:75px;
+    padding:12px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    font-size:29px;
+    font-weight:1000;
+    letter-spacing:4px;
+    color:#fff;
+}
+
+.logo span{
+    color:var(--green);
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:#fff;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+    transition:.25s;
+}
+
+.nav-links a:hover{
+    color:var(--green);
+}
+
+.cart-button{
+    border:1px solid var(--green);
+    background:transparent;
+    color:#fff;
+    border-radius:12px;
+    padding:10px 15px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.cart-button:hover{
+    background:var(--green);
+    color:#000;
+}
+
+.cart-count{
+    color:var(--green);
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:650px;
+    max-width:1200px;
+    margin:auto;
+    padding:70px 20px 90px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.hero-content{
+    width:100%;
+    max-width:1100px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.hero-brand{
+    color:var(--green);
+    font-size:clamp(20px,3vw,38px);
+    font-weight:900;
+    letter-spacing:5px;
+    margin-bottom:70px;
+    text-transform:uppercase;
+}
+
+.hero-title{
+    font-size:clamp(45px,7vw,82px);
+    font-weight:900;
+    line-height:1.25;
+    color:#fff;
+}
+
+.hero-vibe{
+    color:var(--green);
+    font-size:clamp(55px,8vw,95px);
+    font-weight:1000;
+    line-height:1;
+    margin:0 0 55px;
+}
+
+.hero-description{
+    color:#d0d0d0;
+    font-size:clamp(19px,2.5vw,30px);
+    line-height:1.8;
+    max-width:1050px;
+    margin-bottom:55px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-direction:row-reverse;
+    justify-content:center;
+    gap:45px;
+    width:100%;
+}
+
+.hero-btn{
+    min-width:350px;
+    padding:22px 35px;
+    border-radius:30px;
+    text-decoration:none;
+    font-size:23px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.25s;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.hero-btn-green{
+    background:var(--green);
+    color:#000;
+    border:2px solid var(--green);
+}
+
+.hero-btn-green:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 35px rgba(57,255,20,.25);
+}
+
+.hero-btn-outline{
+    background:transparent;
+    color:var(--green);
+    border:2px solid var(--green);
+}
+
+.hero-btn-outline:hover{
+    background:var(--green);
+    color:#000;
+    transform:translateY(-4px);
+}
+
+
+/* ================= GENERAL ================= */
+
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 20px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.section-title h2 span{
+    color:var(--green);
+}
+
+.section-title p{
+    color:#888;
+}
+
+
+/* ================= CATEGORIES ================= */
+
+.categories{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.category{
+    background:linear-gradient(145deg,#151515,#0d0d0d);
+    border:1px solid #252525;
+    border-radius:18px;
+    padding:30px 15px;
+    text-align:center;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.category:hover{
+    border-color:var(--green);
+    transform:translateY(-5px);
+}
+
+.category-icon{
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.category h3{
+    margin-bottom:8px;
+}
+
+.category p{
+    color:#777;
+    font-size:13px;
+}
+
+
+/* ================= BRANDS ================= */
+
+.brands{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.brand{
+    min-height:125px;
+    border:1px solid #252525;
+    background:#101010;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap:10px;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.brand:hover{
+    border-color:var(--green);
+    transform:translateY(-4px);
+    box-shadow:0 8px 25px rgba(57,255,20,.08);
+}
+
+.brand:active{
+    transform:scale(.97);
+}
+
+.brand-name{
+    font-size:22px;
+    font-weight:1000;
+    letter-spacing:1px;
+}
+
+.brand small{
+    color:#666;
+}
+
+.anker{color:#fff;}
+.oraimo{color:#ff4b24;}
+.baseus{color:#fff;}
+.ugreen{color:#19a974;}
+.joyroom{color:#ffb000;}
+.hoco{color:#fff;}
+.mcdodo{color:#f5f5f5;}
+.vidvie{color:#ff3d58;}
+
+
+/* ================= PRODUCTS ================= */
+
+.filter-box{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:35px;
+}
+
+.filter-btn{
+    background:#151515;
+    color:#aaa;
+    border:1px solid #292929;
+    border-radius:30px;
+    padding:10px 20px;
+    cursor:pointer;
+    transition:.25s;
+    font-weight:bold;
+}
+
+.filter-btn:hover,
+.filter-btn.active{
+    background:var(--green);
+    color:#000;
+    border-color:var(--green);
+}
+
+
+/* ================= PRODUCTS GRID ================= */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.product{
+    background:#111;
+    border:1px solid #242424;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.product:hover{
+    transform:translateY(-5px);
+    border-color:#3d3d3d;
+}
+
+.product-img{
+    height:210px;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(57,255,20,.13),
+            transparent 55%
+        ),
+        #171717;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:65px;
+}
+
+.product-img img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    padding:18px;
+}
+
+.product-info{
+    padding:18px;
+}
+
+.product-brand{
+    color:var(--green);
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:7px;
+}
+
+.product h3{
+    font-size:17px;
+    margin-bottom:12px;
+}
+
+.product-price{
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.product-price span{
+    font-size:12px;
+    color:#777;
+}
+
+.add-cart{
+    width:100%;
+    border:none;
+    background:var(--green);
+    color:#000;
+    padding:12px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.add-cart:hover{
+    background:#fff;
+}
+
+.add-cart:disabled{
+    background:#333;
+    color:#777;
+    cursor:not-allowed;
+}
+
+
+/* ================= PRODUCT RESULT TITLE ================= */
+
+.current-filter{
+    text-align:center;
+    color:#777;
+    margin-top:-20px;
+    margin-bottom:30px;
+}
+
+.current-filter strong{
+    color:var(--green);
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-box{
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(57,255,20,.12),
+            transparent 30%
+        ),
+        #111;
+
+    border:1px solid #262626;
+    border-radius:25px;
+    padding:45px 25px;
+    text-align:center;
+}
+
+.contact-box h2{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.contact-box p{
+    color:#888;
+    margin-bottom:25px;
+}
+
+.socials{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.social{
+    text-decoration:none;
+    color:#fff;
+    background:#191919;
+    border:1px solid #292929;
+    border-radius:12px;
+    padding:13px 20px;
+    transition:.25s;
+}
+
+.social:hover{
+    border-color:var(--green);
+    color:var(--green);
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+    border-top:1px solid #222;
+    padding:30px 20px;
+    text-align:center;
+    color:#666;
+}
+
+footer strong{
+    color:#fff;
+}
+
+
+/* ================= CART ================= */
+
+.cart-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    z-index:2000;
+    display:none;
+}
+
+.cart-overlay.show{
+    display:block;
+}
+
+.cart{
+    position:absolute;
+    top:0;
+    left:0;
+    width:min(430px,100%);
+    height:100%;
+    background:#0d0d0d;
+    border-right:1px solid #292929;
+    padding:25px;
+    overflow-y:auto;
+}
+
+.cart-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.close-cart{
+    background:none;
+    border:none;
+    color:#fff;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.cart-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:15px 0;
+    border-bottom:1px solid #222;
+}
+
+.cart-item-icon{
+    width:55px;
+    height:55px;
+    border-radius:12px;
+    background:#191919;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+}
+
+.cart-item-info{
+    flex:1;
+}
+
+.cart-item-info h4{
+    font-size:14px;
+    margin-bottom:6px;
+}
+
+.cart-item-info p{
+    color:var(--green);
+    font-size:13px;
+}
+
+.qty{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    margin-top:7px;
+}
+
+.qty button{
+    width:25px;
+    height:25px;
+    border:none;
+    border-radius:6px;
+    background:#292929;
+    color:#fff;
+    cursor:pointer;
+}
+
+.remove{
+    background:none;
+    border:none;
+    color:#ff5555;
+    cursor:pointer;
+}
+
+.cart-total{
+    margin-top:25px;
+    padding-top:20px;
+    border-top:1px solid #333;
+    display:flex;
+    justify-content:space-between;
+    font-size:20px;
+    font-weight:bold;
+}
+
+
+/* ================= PAYMENT ================= */
+
+.payment-box{
+    margin-top:22px;
+    padding-top:20px;
+    border-top:1px solid #333;
+}
+
+.payment-title{
+    font-size:16px;
+    font-weight:bold;
+    margin-bottom:12px;
+}
+
+.payment-options{
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+}
+
+.payment-option{
+    position:relative;
+}
+
+.payment-option input{
+    position:absolute;
+    opacity:0;
+    pointer-events:none;
+}
+
+.payment-option label{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    width:100%;
+    background:#151515;
+    border:1px solid #292929;
+    border-radius:12px;
+    padding:13px;
+    cursor:pointer;
+    color:#ddd;
+    transition:.25s;
+}
+
+.payment-option label:hover{
+    border-color:var(--green);
+}
+
+.payment-option input:checked + label{
+    border-color:var(--green);
+    background:rgba(57,255,20,.08);
+    color:#fff;
+    box-shadow:0 0 15px rgba(57,255,20,.06);
+}
+
+.payment-icon{
+    width:35px;
+    height:35px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#222;
+    border-radius:8px;
+    font-size:18px;
+}
+
+.payment-option input:checked + label .payment-icon{
+    background:var(--green);
+    color:#000;
+}
+
+.payment-note{
+    margin-top:12px;
+    color:#777;
+    font-size:12px;
+    line-height:1.6;
+}
+
+.whatsapp-checkout{
+    width:100%;
+    margin-top:20px;
+    background:#25D366;
+    color:#000;
+    border:none;
+    padding:15px;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:bold;
+    font-size:16px;
+}
+
+.whatsapp-checkout:hover{
+    filter:brightness(1.08);
+}
+
+.empty-cart{
+    color:#777;
+    text-align:center;
+    padding:50px 10px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero{
+        min-height:auto;
+        padding:55px 15px 70px;
+    }
+
+    .hero-brand{
+        margin-bottom:50px;
+        letter-spacing:3px;
+        font-size:21px;
+    }
+
+    .hero-title{
+        font-size:43px;
+    }
+
+    .hero-vibe{
+        font-size:65px;
+        margin-bottom:40px;
+    }
+
+    .hero-description{
+        font-size:19px;
+        line-height:1.9;
+        margin-bottom:40px;
+    }
+
+    .hero-buttons{
+        gap:15px;
+    }
+
+    .hero-btn{
+        min-width:0;
+        width:48%;
+        padding:17px 10px;
+        font-size:18px;
+        border-radius:20px;
+    }
+
+    .categories,
+    .brands{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+
+@media(max-width:500px){
+
+    .navbar{
+        padding:10px 14px;
+    }
+
+    .logo{
+        font-size:23px;
+    }
+
+    .hero{
+        padding:45px 15px 60px;
+    }
+
+    .hero-brand{
+        font-size:17px;
+        letter-spacing:2px;
+        margin-bottom:45px;
+    }
+
+    .hero-title{
+        font-size:37px;
+    }
+
+    .hero-vibe{
+        font-size:57px;
+        margin-bottom:35px;
+    }
+
+    .hero-description{
+        font-size:17px;
+    }
+
+    .hero-buttons{
+        gap:10px;
+    }
+
+    .hero-btn{
+        width:50%;
+        font-size:16px;
+        padding:16px 7px;
+        border-radius:18px;
+    }
+
+    section{
+        padding:55px 15px;
+    }
+
+    .categories,
+    .brands,
+    .products{
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+    }
+
+    .product-img{
+        height:155px;
+        font-size:48px;
+    }
+
+    .product-info{
+        padding:12px;
+    }
+
+    .product h3{
+        font-size:14px;
+    }
+
+    .product-price{
+        font-size:17px;
+    }
+
+    .section-title h2{
+        font-size:29px;
+    }
+
+    .brand-name{
+        font-size:18px;
+    }
+
+}
+
+
+.checkout-form{margin:15px 0;display:flex;flex-direction:column;gap:10px}
+.checkout-form input,.checkout-form textarea{width:100%;background:#080808;color:#fff;border:1px solid #333;border-radius:10px;padding:12px;font-size:15px;font-family:inherit;outline:none}
+.checkout-form input:focus,.checkout-form textarea:focus{border-color:var(--green)}
+.whatsapp-checkout:disabled{opacity:.6;cursor:not-allowed}
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<nav class="navbar">
+
+    <a href="#home" style="text-decoration:none;">
+
+        <div class="logo">
+            BAV<span>I</span>O
+        </div>
+
+    </a>
+
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="#home">
+                الرئيسية
+            </a>
+        </li>
+
+        <li>
+            <a href="#categories">
+                الأقسام
+            </a>
+        </li>
+
+        <li>
+            <a href="#brands">
+                البرندات
+            </a>
+        </li>
+
+        <li>
+            <a href="#products">
+                المنتجات
+            </a>
+        </li>
+
+        <li>
+            <a href="#contact">
+                تواصل معنا
+            </a>
+        </li>
+
+    </ul>
+
+
+    <button
+        class="cart-button"
+        onclick="openCart()">
+
+        🛒 السلة
+
+        <span
+            class="cart-count"
+            id="cartCount">
+            (0)
+        </span>
+
+    </button>
+
+</nav>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<main id="home">
+
+<section class="hero">
+
+<div class="hero-content">
+
+
+    <div class="hero-brand">
+        BAVIO • TECH ACCESSORIES
+    </div>
+
+
+    <h1 class="hero-title">
+        خلي موبايلك على الـ
+    </h1>
+
+
+    <div class="hero-vibe">
+        .VIBE
+    </div>
+
+
+    <p class="hero-description">
+
+        إكسسوارات موبايلات، سماعات، شواحن وجرابات من أشهر
+
+        <br>
+
+        البراندات في مكان واحد.
+
+    </p>
+
+
+    <div class="hero-buttons">
+
+
+        <a
+            href="#products"
+            class="hero-btn hero-btn-green">
+
+            تسوق الآن
+
+        </a>
+
+
+        <a
+            href="#brands"
+            class="hero-btn hero-btn-outline">
+
+            استكشف البرندات
+
+        </a>
+
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section id="categories">
+
+<div class="section-title">
+
+    <h2>
+
+        الأقسام
+        <span>
+            الرئيسية
+        </span>
+
+    </h2>
+
+    <p>
+        اختار القسم اللي بتدور عليه
+    </p>
+
+</div>
+
+
+<div class="categories">
+
+
+    <div
+        class="category"
+        onclick="filterProducts('سماعات')">
+
+        <div class="category-icon">
+            🎧
+        </div>
+
+        <h3>
+            سماعات
+        </h3>
+
+        <p>
+            Headphones & Earbuds
+        </p>
+
+    </div>
+
+
+    <div
+        class="category"
+        onclick="filterProducts('جرابات')">
+
+        <div class="category-icon">
+            📱
+        </div>
+
+        <h3>
+            جرابات
+        </h3>
+
+        <p>
+            Phone Cases
+        </p>
+
+    </div>
+
+
+    <div
+        class="category"
+        onclick="filterProducts('شواحن')">
+
+        <div class="category-icon">
+            ⚡
+        </div>
+
+        <h3>
+            شواحن
+        </h3>
+
+        <p>
+            Chargers & Cables
+        </p>
+
+    </div>
+
+
+    <div
+        class="category"
+        onclick="filterProducts('إكسسوارات')">
+
+        <div class="category-icon">
+            ✨
+        </div>
+
+        <h3>
+            إكسسوارات
+        </h3>
+
+        <p>
+            More Accessories
+        </p>
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ================= BRANDS ================= -->
+
+<section id="brands">
+
+<div class="section-title">
+
+    <h2>
+
+        أشهر
+        <span>
+            البرندات
+        </span>
+
+    </h2>
+
+    <p>
+        اضغط على أي براند لعرض منتجاته
+    </p>
+
+</div>
+
+
+<div class="brands">
+
+
+    <div
+        class="brand"
+        onclick="filterBrand('ANKER')">
+
+        <div class="brand-name anker">
+            ANKER
+        </div>
+
+        <small>
+            عرض منتجات ANKER
+        </small>
+
+    </div>
+
+
+    <div
+        class="brand"
+        onclick="filterBrand('oraimo')">
+
+        <div class="brand-name oraimo">
+            oraimo
+        </div>
+
+        <small>
+            عرض منتجات oraimo
+        </small>
+
+    </div>
+
+
+    <div
+        class="brand"
+        onclick="filterBrand('BASEUS')">
+
+        <div class="brand-name baseus">
+            BASEUS
+        </div>
+
+        <small>
+            عرض منتجات BASEUS
+        </small>
+
+    </div>
+
+
+    <div
+        class="brand"
+        onclick="filterBrand('UGREEN')">
+
+        <div class="brand-name ugreen">
+            UGREEN
+        </div>
+
+        <small>
+            عرض منتجات UGREEN
+        </small>
+
+    </div>
+
+
+    <div
+        class="brand"
+        onclick="filterBrand('JOYROOM')">
+
+        <div class="brand-name joyroom">
+            JOYROOM
+        </div>
+
+        <small>
+            عرض منتجات JOYROOM
+        </small>
+
+    </div>
+
+
+    <div
+        class="brand"
+        onclick="filterBrand('HOCO')">
+
+        <div class="brand-name hoco">
+            HOCO.
+        </div>
+
+        <small>
+            عرض منتجات HOCO
+        </small>
+
+    </div>
+
+
+    <div
+        class="brand"
+        onclick="filterBrand('Mcdodo')">
+
+        <div class="brand-name mcdodo">
+            Mcdodo
+        </div>
+
+        <small>
+            عرض منتجات Mcdodo
+        </small>
+
+    </div>
+
+
+    <div
+        class="brand"
+        onclick="filterBrand('VIDVIE')">
+
+        <div class="brand-name vidvie">
+            VIDVIE
+        </div>
+
+        <small>
+            عرض منتجات VIDVIE
+        </small>
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section id="products">
+
+<div class="section-title">
+
+    <h2>
+
+        منتجات
+        <span>
+            BAVIO
+        </span>
+
+    </h2>
+
+    <p>
+        كل المنتجات متاحة هنا، أو اختار براند معين
+    </p>
+
+</div>
+
+
+<div class="filter-box">
+
+
+    <button
+        class="filter-btn active"
+        onclick="showAllProducts()">
+
+        كل المنتجات
+
+    </button>
+
+
+    <button
+        class="filter-btn"
+        onclick="filterProducts('سماعات')">
+
+        🎧 سماعات
+
+    </button>
+
+
+    <button
+        class="filter-btn"
+        onclick="filterProducts('جرابات')">
+
+        📱 جرابات
+
+    </button>
+
+
+    <button
+        class="filter-btn"
+        onclick="filterProducts('شواحن')">
+
+        ⚡ شواحن
+
+    </button>
+
+
+    <button
+        class="filter-btn"
+        onclick="filterProducts('إكسسوارات')">
+
+        ✨ إكسسوارات
+
+    </button>
+
+
+</div>
+
+
+<div
+    class="current-filter"
+    id="currentFilter">
+
+    بتعرض:
+    <strong>
+        كل المنتجات
+    </strong>
+
+</div>
+
+
+<div
+    class="products"
+    id="productsGrid">
+</div>
+
+
+</section>
+
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+<div class="contact-box">
+
+    <h2>
+
+        تواصل مع
+
+        <span style="color:#39ff14;">
+            BAVIO
+        </span>
+
+    </h2>
+
+
+    <p>
+        عندك سؤال أو عايز تطلب منتج؟
+        تواصل معانا مباشرة.
+    </p>
+
+
+    <div class="socials">
+
+
+        <a
+            class="social"
+            href="https://wa.me/201223187189"
+            target="_blank">
+
+            💬 WhatsApp
+
+        </a>
+
+
+        <a
+            class="social"
+            href="https://www.facebook.com/share/1DBMsQ9X7X/"
+            target="_blank">
+
+            f Facebook
+
+        </a>
+
+
+        <a
+            class="social"
+            href="https://www.instagram.com/bavio_1/"
+            target="_blank">
+
+            ◎ Instagram
+
+        </a>
+
+
+        <a
+            class="social"
+            href="#"
+            onclick="alert('ضيف لينك TikTok هنا لما يكون جاهز'); return false;">
+
+            ♪ TikTok
+
+        </a>
+
+
+    </div>
+
+</div>
+
+</section>
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+    © 2026
+
+    <strong>
+        BAVIO
+    </strong>
+
+    — Tech Accessories
+
+</p>
+
+</footer>
+
+
+
+<!-- ================= CART ================= -->
+
+<div
+    class="cart-overlay"
+    id="cartOverlay">
+
+
+<div class="cart">
+
+
+    <div class="cart-header">
+
+        <h2>
+            🛒 سلة المشتريات
+        </h2>
+
+
+        <button
+            class="close-cart"
+            onclick="closeCart()">
+
+            ×
+
+        </button>
+
+    </div>
+
+
+    <div id="cartItems">
+    </div>
+
+
+    <div id="cartBottom">
+    </div>
+
+
+</div>
+
+</div>
+
+
+
+<script>
+
+
+/* =========================================================
+   SUPABASE
+   ========================================================= */
+
+const SUPABASE_URL =
+    "https://tapzzntoogyolmrqqkeq.supabase.co";
+
+const SUPABASE_KEY =
+    "sb_publishable_01vznus7ebvsNKa2KroFew_HVK2xu3M";
+
+
+/* =========================================================
+   PRODUCTS FROM SUPABASE
+   ========================================================= */
+
+let products = [];
+
+
+/* =========================================================
+   CART
+   ========================================================= */
+
+let cart = [];
+
+
+/* =========================================================
+   PAYMENT METHOD
+   ========================================================= */
+
+let paymentMethod = "الدفع عند الاستلام";
+
+
+/* =========================================================
+   PRODUCT ICON
+   ========================================================= */
+
+function getProductIcon(category){
+
+    const value =
+        String(category || "").trim();
+
+    if(value === "سماعات"){
+        return "🎧";
+    }
+
+    if(value === "جرابات"){
+        return "📱";
+    }
+
+    if(value === "شواحن"){
+        return "⚡";
+    }
+
+    if(value === "إكسسوارات"){
+        return "✨";
+    }
+
+    return "📦";
+}
+
+
+/* =========================================================
+   HTML SAFETY
+   ========================================================= */
+
+function escapeHTML(value){
+
+    return String(value ?? "")
+        .replace(/&/g,"&amp;")
+        .replace(/</g,"&lt;")
+        .replace(/>/g,"&gt;")
+        .replace(/"/g,"&quot;")
+        .replace(/'/g,"&#039;");
+}
+
+
+/* =========================================================
+   LOAD PRODUCTS
+   ========================================================= */
+
+async function loadProducts(){
+
+    const grid =
+        document.getElementById("productsGrid");
+
+    try{
+
+        grid.innerHTML = `
+
+            <p style="
+                grid-column:1/-1;
+                text-align:center;
+                color:#777;
+                padding:40px;
+            ">
+
+                جاري تحميل المنتجات...
+
+            </p>
+
+        `;
+
+
+        const headers = {
+
+            "apikey":
+                SUPABASE_KEY,
+
+            "Authorization":
+                "Bearer " + SUPABASE_KEY
+
+        };
+
+
+        const [
+
+            productsResponse,
+            brandsResponse,
+            categoriesResponse
+
+        ] = await Promise.all([
+
+
+            fetch(
+
+                SUPABASE_URL +
+                "/rest/v1/products_public?select=*&order=created_at.desc",
+
+                {
+                    method:"GET",
+                    headers:headers
+                }
+
+            ),
+
+
+            fetch(
+
+                SUPABASE_URL +
+                "/rest/v1/brands" +
+                "?select=id,name",
+
+                {
+                    method:"GET",
+                    headers:headers
+                }
+
+            ),
+
+
+            fetch(
+
+                SUPABASE_URL +
+                "/rest/v1/categories" +
+                "?select=id,name",
+
+                {
+                    method:"GET",
+                    headers:headers
+                }
+
+            )
+
+        ]);
+
+
+        if(
+
+            !productsResponse.ok ||
+            !brandsResponse.ok ||
+            !categoriesResponse.ok
+
+        ){
+
+            const errors = await Promise.all([
+
+                productsResponse.text(),
+                brandsResponse.text(),
+                categoriesResponse.text()
+
+            ]);
+
+            throw new Error(
+                errors.join(" | ")
+            );
+
+        }
+
+
+        const [
+
+            productRows,
+            brandRows,
+            categoryRows
+
+        ] = await Promise.all([
+
+            productsResponse.json(),
+            brandsResponse.json(),
+            categoriesResponse.json()
+
+        ]);
+
+
+        const brandMap =
+            new Map(
+                brandRows.map(
+                    brand => [
+                        String(brand.id),
+                        brand.name
+                    ]
+                )
+            );
+
+
+        const categoryMap =
+            new Map(
+                categoryRows.map(
+                    category => [
+                        String(category.id),
+                        category.name
+                    ]
+                )
+            );
+
+
+        products =
+            productRows.map(product => {
+
+                const category =
+                    categoryMap.get(
+                        String(product.category_id)
+                    ) || "إكسسوارات";
+
+
+                const brand =
+                    brandMap.get(
+                        String(product.brand_id)
+                    ) || "BAVIO";
+
+
+                return {
+
+                    id:product.id,
+
+                    name:
+                        product.name ||
+                        "منتج بدون اسم",
+
+                    brand:brand,
+
+                    category:category,
+
+                    price:
+                        Number(
+                            product.sale_price || 0
+                        ),
+
+                    icon:
+                        getProductIcon(category),
+
+                    image_url:
+                        product.image_url || "",
+
+                    stock:
+                        Number(
+                            product.stock || 0
+                        )
+
+                };
+
+            });
+
+
+        console.log(
+            "BAVIO products loaded:",
+            products
+        );
+
+
+        displayProducts(products);
+
+
+    }catch(error){
+
+        console.error(
+            "BAVIO loadProducts error:",
+            error
+        );
+
+
+        grid.innerHTML = `
+
+            <div style="
+                grid-column:1/-1;
+                text-align:center;
+                color:#777;
+                padding:40px;
+            ">
+
+                <div style="
+                    font-size:40px;
+                    margin-bottom:15px;
+                ">
+                    ⚠️
+                </div>
+
+                <div style="
+                    color:#fff;
+                    font-size:18px;
+                    margin-bottom:10px;
+                ">
+                    حصلت مشكلة في تحميل المنتجات
+                </div>
+
+                <div style="
+                    color:#777;
+                    font-size:13px;
+                    margin-bottom:20px;
+                ">
+                    تأكد إن اتصال الموقع بقاعدة البيانات شغال.
+                </div>
+
+                <button
+                    onclick="loadProducts()"
+                    style="
+                        background:#39ff14;
+                        color:#000;
+                        border:none;
+                        padding:12px 25px;
+                        border-radius:10px;
+                        cursor:pointer;
+                        font-weight:bold;
+                    ">
+
+                    إعادة المحاولة
+
+                </button>
+
+            </div>
+
+        `;
+
+    }
+
+}
+
+
+/* =========================================================
+   DISPLAY PRODUCTS
+   ========================================================= */
+
+function displayProducts(list){
+
+    const grid =
+        document.getElementById("productsGrid");
+
+    grid.innerHTML = "";
+
+
+    if(!list || list.length === 0){
+
+        grid.innerHTML = `
+
+            <p style="
+                grid-column:1/-1;
+                text-align:center;
+                color:#777;
+                padding:40px;
+            ">
+
+                مفيش منتجات متاحة هنا حاليًا.
+
+            </p>
+
+        `;
+
+        return;
+
+    }
+
+
+    list.forEach(product => {
+
+
+        const productId =
+            JSON.stringify(String(product.id));
+
+
+        const imageHTML =
+            product.image_url
+
+            ?
+
+            `
+
+            <img
+                src="${escapeHTML(product.image_url)}"
+                alt="${escapeHTML(product.name)}"
+                loading="lazy"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+            >
+
+            <span style="display:none;">
+                ${escapeHTML(product.icon)}
+            </span>
+
+            `
+
+            :
+
+            escapeHTML(product.icon);
+
+
+        const outOfStock =
+            Number(product.stock) <= 0;
+
+
+        grid.innerHTML += `
+
+        <div class="product">
+
+            <div class="product-img">
+
+                ${imageHTML}
+
+            </div>
+
+
+            <div class="product-info">
+
+                <div class="product-brand">
+
+                    ${escapeHTML(product.brand)}
+
+                </div>
+
+
+                <h3>
+
+                    ${escapeHTML(product.name)}
+
+                </h3>
+
+
+                <div class="product-price">
+
+                    ${Number(product.price).toLocaleString("en-EG")}
+
+                    <span>
+                        جنيه
+                    </span>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick='addToCart(${productId})'
+                    ${outOfStock ? "disabled" : ""}>
+
+                    ${
+                        outOfStock
+                        ?
+                        "غير متوفر حاليًا"
+                        :
+                        "+ إضافة للسلة"
+                    }
+
+                </button>
+
+            </div>
+
+        </div>
+
+        `;
+
+    });
+
+}
+
+
+/* =========================================================
+   SHOW ALL PRODUCTS
+   ========================================================= */
+
+function showAllProducts(){
+
+    setActiveFilter();
+
+    updateCurrentFilter(
+        "كل المنتجات"
+    );
+
+    displayProducts(products);
+
+}
+
+
+/* =========================================================
+   FILTER BY CATEGORY
+   ========================================================= */
+
+function filterProducts(category){
+
+    setActiveFilter();
+
+    updateCurrentFilter(category);
+
+
+    const filtered =
+        products.filter(
+
+            product =>
+
+                String(product.category)
+                    .trim()
+                    .toLowerCase()
+
+                ===
+
+                String(category)
+                    .trim()
+                    .toLowerCase()
+
+        );
+
+
+    displayProducts(filtered);
+
+
+    document
+        .getElementById("products")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+}
+
+
+/* =========================================================
+   FILTER BY BRAND
+   ========================================================= */
+
+function filterBrand(brand){
+
+    const filtered =
+        products.filter(
+
+            product =>
+
+                String(product.brand)
+                    .trim()
+                    .toLowerCase()
+
+                ===
+
+                String(brand)
+                    .trim()
+                    .toLowerCase()
+
+        );
+
+
+    setActiveFilter();
+
+
+    updateCurrentFilter(
+        "منتجات " + brand
+    );
+
+
+    displayProducts(filtered);
+
+
+    document
+        .getElementById("products")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+}
+
+
+/* =========================================================
+   CURRENT FILTER TEXT
+   ========================================================= */
+
+function updateCurrentFilter(name){
+
+    document
+        .getElementById("currentFilter")
+        .innerHTML = `
+
+            بتعرض:
+            <strong>
+                ${escapeHTML(name)}
+            </strong>
+
+        `;
+
+}
+
+
+/* =========================================================
+   ACTIVE FILTER
+   ========================================================= */
+
+function setActiveFilter(){
+
+    document
+        .querySelectorAll(".filter-btn")
+        .forEach(btn => {
+
+            btn.classList.remove("active");
+
+        });
+
+}
+
+
+/* =========================================================
+   ADD TO CART
+   ========================================================= */
+
+function addToCart(id){
+
+    const product =
+        products.find(
+
+            p =>
+                String(p.id) ===
+                String(id)
+
+        );
+
+
+    if(!product){
+        return;
+    }
+
+
+    if(Number(product.stock) <= 0){
+
+        alert(
+            "المنتج غير متوفر حاليًا."
+        );
+
+        return;
+
+    }
+
+
+    const existing =
+        cart.find(
+
+            item =>
+                String(item.id) ===
+                String(id)
+
+        );
+
+
+    if(existing){
+
+        if(
+            existing.qty >=
+            Number(product.stock)
+        ){
+
+            alert(
+                "الكمية المطلوبة أكبر من المخزون المتاح."
+            );
+
+            return;
+
+        }
+
+
+        existing.qty++;
+
+    }else{
+
+        cart.push({
+
+            ...product,
+
+            qty:1
+
+        });
+
+    }
+
+
+    updateCart();
+
+    openCart();
+
+}
+
+
+/* =========================================================
+   UPDATE CART
+   ========================================================= */
+
+function updateCart(){
+
+    const count =
+        cart.reduce(
+
+            (sum,item) =>
+                sum + item.qty,
+
+            0
+
+        );
+
+
+    document
+        .getElementById("cartCount")
+        .innerText =
+        `(${count})`;
+
+
+    const container =
+        document.getElementById("cartItems");
+
+
+    const bottom =
+        document.getElementById("cartBottom");
+
+
+    if(cart.length === 0){
+
+        container.innerHTML = `
+
+            <div class="empty-cart">
+
+                🛒
+
+                <br><br>
+
+                السلة فاضية
+
+            </div>
+
+        `;
+
+        bottom.innerHTML = "";
+
+        return;
+
+    }
+
+
+    container.innerHTML = "";
+
+
+    cart.forEach(item => {
+
+
+        const itemId =
+            JSON.stringify(String(item.id));
+
+
+        container.innerHTML += `
+
+        <div class="cart-item">
+
+
+            <div class="cart-item-icon">
+
+                ${escapeHTML(item.icon)}
+
+            </div>
+
+
+            <div class="cart-item-info">
+
+
+                <h4>
+
+                    ${escapeHTML(item.name)}
+
+                </h4>
+
+
+                <p>
+
+                    ${Number(item.price).toLocaleString("en-EG")}
+
+                    جنيه
+
+                </p>
+
+
+                <div class="qty">
+
+
+                    <button
+                        onclick='changeQty(${itemId},1)'>
+
+                        +
+
+                    </button>
+
+
+                    <span>
+                        ${item.qty}
+                    </span>
+
+
+                    <button
+                        onclick='changeQty(${itemId},-1)'>
+
+                        -
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+            <button
+                class="remove"
+                onclick='removeFromCart(${itemId})'>
+
+                حذف
+
+            </button>
+
+
+        </div>
+
+        `;
+
+    });
+
+
+    const total =
+        cart.reduce(
+
+            (sum,item) =>
+
+                sum +
+                Number(item.price) *
+                item.qty,
+
+            0
+
+        );
+
+
+    bottom.innerHTML = `
+
+        <div class="cart-total">
+
+            <span>
+                الإجمالي
+            </span>
+
+
+            <span>
+
+                ${total.toLocaleString("en-EG")}
+
+                جنيه
+
+            </span>
+
+        </div>
+
+
+        <!-- ================= PAYMENT ================= -->
+
+        <div class="payment-box">
+
+            <div class="payment-title">
+
+                💳 اختار طريقة الدفع
+
+            </div>
+
+
+            <div class="payment-options">
+
+
+                <!-- CASH ON DELIVERY -->
+
+                <div class="payment-option">
+
+                    <input
+                        type="radio"
+                        name="payment"
+                        id="cashPayment"
+                        value="الدفع عند الاستلام"
+                        ${paymentMethod === "الدفع عند الاستلام" ? "checked" : ""}
+                        onchange="selectPayment(this.value)"
+                    >
+
+                    <label for="cashPayment">
+
+                        <span class="payment-icon">
+                            💵
+                        </span>
+
+                        <span>
+                            الدفع عند الاستلام
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <!-- INSTAPAY -->
+
+                <div class="payment-option">
+
+                    <input
+                        type="radio"
+                        name="payment"
+                        id="instapayPayment"
+                        value="InstaPay"
+                        ${paymentMethod === "InstaPay" ? "checked" : ""}
+                        onchange="selectPayment(this.value)"
+                    >
+
+                    <label for="instapayPayment">
+
+                        <span class="payment-icon">
+                            📱
+                        </span>
+
+                        <span>
+                            الدفع عن طريق InstaPay
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <!-- WALLET -->
+
+                <div class="payment-option">
+
+                    <input
+                        type="radio"
+                        name="payment"
+                        id="walletPayment"
+                        value="محفظة إلكترونية"
+                        ${paymentMethod === "محفظة إلكترونية" ? "checked" : ""}
+                        onchange="selectPayment(this.value)"
+                    >
+
+                    <label for="walletPayment">
+
+                        <span class="payment-icon">
+                            📱
+                        </span>
+
+                        <span>
+                            الدفع عن طريق محفظة إلكترونية
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="payment-note">
+
+                ${
+                    paymentMethod === "الدفع عند الاستلام"
+
+                    ?
+
+                    "هتدفع قيمة الطلب عند استلامه."
+
+                    :
+
+                    paymentMethod === "InstaPay"
+
+                    ?
+
+                    "بعد إرسال الطلب هنرسل لك بيانات InstaPay لإتمام الدفع."
+
+                    :
+
+                    "بعد إرسال الطلب هنرسل لك رقم المحفظة وطريقة الدفع."
+
+                }
+
+            </div>
+
+        </div>
+
+
+        <div class="checkout-form">
+            <div class="payment-title">📦 بيانات التوصيل</div>
+            <input type="text" placeholder="الاسم" autocomplete="name" value="${escapeHTML(customer.name)}" oninput="customer.name=this.value">
+            <input type="tel" inputmode="tel" placeholder="رقم الموبايل (01xxxxxxxxx)" autocomplete="tel" value="${escapeHTML(customer.phone)}" oninput="customer.phone=this.value">
+            <textarea rows="2" placeholder="العنوان بالتفصيل" autocomplete="street-address" oninput="customer.address=this.value">${escapeHTML(customer.address)}</textarea>
+        </div>
+        <button class="whatsapp-checkout" id="orderBtn" onclick="submitOrder()">✅ تأكيد الطلب وإرساله على WhatsApp</button>
+
+    `;
+
+}
+
+
+/* =========================================================
+   SELECT PAYMENT
+   ========================================================= */
+
+function selectPayment(method){
+
+    paymentMethod = method;
+
+    updateCart();
+
+}
+
+
+/* =========================================================
+   CHANGE QUANTITY
+   ========================================================= */
+
+function changeQty(id,change){
+
+    const item =
+        cart.find(
+
+            item =>
+                String(item.id) ===
+                String(id)
+
+        );
+
+
+    if(!item){
+        return;
+    }
+
+
+    const product =
+        products.find(
+
+            p =>
+                String(p.id) ===
+                String(id)
+
+        );
+
+
+    item.qty += change;
+
+
+    if(
+
+        product &&
+        item.qty >
+        Number(product.stock)
+
+    ){
+
+        item.qty =
+            Number(product.stock);
+
+    }
+
+
+    if(item.qty <= 0){
+
+        cart =
+            cart.filter(
+
+                item =>
+                    String(item.id) !==
+                    String(id)
+
+            );
+
+    }
+
+
+    updateCart();
+
+}
+
+
+/* =========================================================
+   REMOVE PRODUCT
+   ========================================================= */
+
+function removeFromCart(id){
+
+    cart =
+        cart.filter(
+
+            item =>
+                String(item.id) !==
+                String(id)
+
+        );
+
+
+    updateCart();
+
+}
+
+
+/* =========================================================
+   OPEN CART
+   ========================================================= */
+
+function openCart(){
+
+    document
+        .getElementById("cartOverlay")
+        .classList.add("show");
+
+}
+
+
+/* =========================================================
+   CLOSE CART
+   ========================================================= */
+
+function closeCart(){
+
+    document
+        .getElementById("cartOverlay")
+        .classList.remove("show");
+
+}
+
+
+/* =========================================================
+   ORDER: saved in Supabase (place_order), then WhatsApp
+   ========================================================= */
+const customer = {name:"",phone:"",address:""};
+let submitting = false;
+
+async function submitOrder(){
+    if(submitting) return;
+    if(cart.length === 0){ alert("السلة فاضية"); return; }
+    const name = customer.name.trim();
+    const phone = customer.phone.replace(/[\s-]/g,"");
+    const address = customer.address.trim();
+    if(name.length < 2){ alert("اكتب اسمك."); return; }
+    if(!/^(\+?20|0)?1[0125][0-9]{8}$/.test(phone)){ alert("اكتب رقم موبايل مصري صحيح."); return; }
+    if(address.length < 8){ alert("اكتب العنوان بالتفصيل."); return; }
+    const btn = document.getElementById("orderBtn");
+    submitting = true; btn.disabled = true; btn.textContent = "جاري إرسال الطلب...";
+    try{
+        const res = await fetch(SUPABASE_URL + "/rest/v1/rpc/place_order",{
+            method:"POST",
+            headers:{"apikey":SUPABASE_KEY,"Authorization":"Bearer "+SUPABASE_KEY,"Content-Type":"application/json"},
+            body:JSON.stringify({
+                p_name:name, p_phone:phone, p_address:address, p_payment:paymentMethod,
+                p_items:cart.map(i=>({id:String(i.id),qty:i.qty}))
+            })
+        });
+        const data = await res.json().catch(()=>null);
+        if(!res.ok) throw new Error((data && data.message) || "تعذر إرسال الطلب، حاول تاني.");
+        const lines = ["السلام عليكم، طلب جديد من BAVIO","رقم الطلب: "+String(data.order_id).slice(0,8),""];
+        data.items.forEach(i => lines.push("• "+i.name+" × "+i.qty+" = "+(i.price*i.qty)+" جنيه"));
+        lines.push("","الإجمالي: "+data.total+" جنيه","الدفع: "+paymentMethod,"الاسم: "+name,"الموبايل: "+phone,"العنوان: "+address);
+        cart = []; updateCart(); closeCart();
+        window.location.href = "https://wa.me/201223187189?text="+encodeURIComponent(lines.join("\n"));
+    }catch(error){
+        alert(error.message);
+        loadProducts();
+    }finally{
+        submitting = false;
+        const b = document.getElementById("orderBtn");
+        if(b){ b.disabled = false; b.textContent = "✅ تأكيد الطلب وإرساله على WhatsApp"; }
+    }
+}
+
+/* =========================================================
+   CLOSE CART BY CLICKING OUTSIDE
+   ========================================================= */
+
+document
+    .getElementById("cartOverlay")
+    .addEventListener(
+
+        "click",
+
+        function(e){
+
+            if(e.target === this){
+
+                closeCart();
+
+            }
+
+        }
+
+    );
+
+
+/* =========================================================
+   START WEBSITE
+   ========================================================= */
+
+updateCart();
+
+loadProducts();
+
+</script>
+
+</body>
+</html>
